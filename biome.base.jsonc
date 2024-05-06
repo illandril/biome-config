@@ -100,12 +100,15 @@
   },
   "overrides": [
     {
-      "include": ["**/*.test.*"],
+      "include": ["**/*.test.*", "**/tests/**"],
       "linter": {
         "rules": {
           "style": {
             "noNonNullAssertion": "off",
             "useFilenamingConvention": "off"
+          },
+          "suspicious": {
+            "noExplicitAny": "off"
           }
         }
       }
