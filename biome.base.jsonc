@@ -41,9 +41,6 @@
         "noUnusedPrivateClassMembers": "error",
         "noUnusedVariables": "error"
       },
-      "performance": {
-        "noReExportAll": "error"
-      },
       "style": {
         "noRestrictedGlobals": {
           "level": "error",
