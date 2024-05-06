@@ -1,13 +1,17 @@
 {
   "name": "@illandril/biome-config",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Biome rules used by illandril for his projects",
   "type": "module",
   "exports": {
     ".": "./biome.base.jsonc",
     "./react": "./biome.react.jsonc"
   },
-  "files": ["biome.base.jsonc", "biome.react.jsonc", "LICENSE"],
+  "files": [
+    "biome.base.jsonc",
+    "biome.react.jsonc",
+    "LICENSE"
+  ],
   "scripts": {
     "lint": "biome check .",
     "lint:fix": "npm run lint -- --apply",
@@ -21,7 +25,13 @@
     "type": "git",
     "url": "git+https://github.com/illandril/biome-config.git"
   },
-  "keywords": ["biome", "biomejs", "biome config", "format", "lint"],
+  "keywords": [
+    "biome",
+    "biomejs",
+    "biome config",
+    "format",
+    "lint"
+  ],
   "author": "Joe Spandrusyszyn",
   "license": "MIT",
   "bugs": {
