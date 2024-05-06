@@ -32,7 +32,6 @@
       "recommended": true,
       "complexity": {
         "noExcessiveCognitiveComplexity": "error",
-        "noVoid": "error",
         "useSimplifiedLogicExpression": "error"
       },
       "correctness": {
@@ -43,7 +42,6 @@
         "noUnusedVariables": "error"
       },
       "performance": {
-        "noBarrelFile": "error",
         "noReExportAll": "error"
       },
       "style": {
@@ -66,7 +64,7 @@
           "options": {
             "strictCase": false,
             "requireAscii": true,
-            "filenameCases": ["kebab-case", "export"]
+            "filenameCases": ["kebab-case", "camelCase", "export"]
           }
         },
         "useForOf": "error",
@@ -82,7 +80,9 @@
       "suspicious": {
         "noEmptyBlockStatements": "error",
         "noSkippedTests": "error",
-        "useAwait": "error"
+        "useAwait": "error",
+        // Temporary workaround for https://github.com/biomejs/biome/issues/2683
+        "noRedeclare": "off"
       },
       "nursery": {
         "noConsole": "error",
@@ -96,15 +96,27 @@
       }
     }
   },
+  "json": {
+    "formatter": {
+      "lineEnding": "lf"
+    }
+  },
   "overrides": [
     {
       "include": ["**/*.test.*"],
       "linter": {
         "rules": {
           "style": {
+            "noNonNullAssertion": "off",
             "useFilenamingConvention": "off"
           }
         }
+      }
+    },
+    {
+      "include": ["**/package-lock.json", "**/package.json"],
+      "formatter": {
+        "enabled": false
       }
     }
   ]

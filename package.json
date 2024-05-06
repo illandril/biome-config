@@ -4,18 +4,17 @@
   "description": "Biome rules used by illandril for his projects",
   "type": "module",
   "exports": {
-    ".": "./biome.base.json",
-    "./react": "./biome.react.json",
-    "./foundryvtt": "./biome.foundryvtt.json"
+    ".": "./biome.base.jsonc",
+    "./react": "./biome.react.jsonc"
   },
-  "files": ["biome.base.json", "biome.react.json", "biome.foundryvtt.json", "LICENSE"],
+  "files": ["biome.base.jsonc", "biome.react.jsonc", "LICENSE"],
   "scripts": {
     "lint": "biome check .",
     "lint:fix": "npm run lint -- --apply",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "validate": "npm run test && npm run lint",
+    "validate": "npm run test && npm run type-check && npm run lint",
     "prepare": "husky"
   },
   "repository": {
