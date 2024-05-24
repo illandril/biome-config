@@ -31,8 +31,7 @@
     "rules": {
       "recommended": true,
       "complexity": {
-        "noExcessiveCognitiveComplexity": "error",
-        "useSimplifiedLogicExpression": "error"
+        "noExcessiveCognitiveComplexity": "error"
       },
       "correctness": {
         "noNewSymbol": "error",
