@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/illandril/biome-config",
   "dependencies": {
-    "@biomejs/biome": "1.7.2"
+    "@biomejs/biome": "1.8.0"
   },
   "devDependencies": {
     "@biomejs/backend-jsonrpc": "^1.7.2",
