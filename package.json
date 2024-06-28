@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@biomejs/backend-jsonrpc": "^1.7.2",
-    "@biomejs/js-api": "^0.5.0",
+    "@biomejs/js-api": "^0.6.2",
     "@biomejs/wasm-bundler": "1.7.2",
     "@biomejs/wasm-nodejs": "1.7.2",
     "@types/node": "^20.12.8",
