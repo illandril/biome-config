@@ -14,7 +14,12 @@
       "jsxQuoteStyle": "double",
       "quoteStyle": "single",
       "semicolons": "always",
-      "trailingComma": "all"
+      "trailingCommas": "all"
+    }
+  },
+  "json": {
+    "formatter": {
+      "lineEnding": "lf"
     }
   },
   "formatter": {
@@ -34,11 +39,13 @@
         "noExcessiveCognitiveComplexity": "error"
       },
       "correctness": {
+        "noFlatMapIdentity": "error",
         "noNewSymbol": "error",
         "noUndeclaredVariables": "error",
         "noUnusedImports": "error",
         "noUnusedPrivateClassMembers": "error",
-        "noUnusedVariables": "error"
+        "noUnusedVariables": "error",
+        "useArrayLiterals": "error"
       },
       "style": {
         "noRestrictedGlobals": {
@@ -84,17 +91,11 @@
         "noConsole": "error",
         "noDuplicateElseIf": "error",
         "noDuplicateJsonKeys": "error",
-        "noEvolvingAny": "error",
+        "noEvolvingTypes": "error",
         "noMisplacedAssertion": "error",
-        "noFlatMapIdentity": "error",
-        "useArrayLiterals": "error",
-        "useConsistentBuiltinInstatiation": "error"
+        "useConsistentBuiltinInstantiation": "error",
+        "useDateNow": "error"
       }
-    }
-  },
-  "json": {
-    "formatter": {
-      "lineEnding": "lf"
     }
   },
   "overrides": [

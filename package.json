@@ -39,18 +39,18 @@
   },
   "homepage": "https://github.com/illandril/biome-config",
   "dependencies": {
-    "@biomejs/biome": "1.7.2"
+    "@biomejs/biome": "1.8.3"
   },
   "devDependencies": {
-    "@biomejs/backend-jsonrpc": "^1.7.2",
-    "@biomejs/js-api": "^0.5.0",
-    "@biomejs/wasm-bundler": "1.7.2",
-    "@biomejs/wasm-nodejs": "1.7.2",
-    "@types/node": "^20.12.8",
-    "@types/react": "^18.3.1",
+    "@biomejs/backend-jsonrpc": "^1.8.3",
+    "@biomejs/js-api": "^0.6.2",
+    "@biomejs/wasm-bundler": "1.8.3",
+    "@biomejs/wasm-nodejs": "1.8.3",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
     "husky": "^9.0.11",
     "react": "^18.3.1",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.3",
     "vitest": "^1.6.0"
   },
   "peerDependencies": {
