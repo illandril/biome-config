@@ -84,8 +84,7 @@
         "noEmptyBlockStatements": "error",
         "noSkippedTests": "error",
         "useAwait": "error",
-        // Temporary workaround for https://github.com/biomejs/biome/issues/2683
-        "noRedeclare": "off"
+        "noRedeclare": "error"
       },
       "nursery": {
         "noConsole": "error",

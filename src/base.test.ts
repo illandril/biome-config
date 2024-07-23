@@ -6,7 +6,7 @@ const promiseExec = promisify(exec);
 
 it('test', async () => {
   const promise = promiseExec(
-    'npx biome check --apply --config-path="biome.base.jsonc" --stdin-file-path="example.ts"',
+    'npx biome check --write --config-path="biome.base.jsonc" --stdin-file-path="example.ts"',
     {
       encoding: 'utf-8',
       timeout: 5000,
