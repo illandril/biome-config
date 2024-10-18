@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/illandril/biome-config",
   "dependencies": {
-    "@biomejs/biome": "1.8.3"
+    "@biomejs/biome": "1.9.4"
   },
   "devDependencies": {
     "@types/node": "^22.7.4",
