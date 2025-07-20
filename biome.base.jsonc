@@ -1,7 +1,16 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "organizeImports": {
-    "enabled": true
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [":URL:", ":NODE:", ":PACKAGE:", ":ALIAS:", ":PATH:"]
+          }
+        }
+      }
+    }
   },
   "vcs": {
     "enabled": true,
@@ -36,24 +45,26 @@
     "rules": {
       "recommended": true,
       "complexity": {
-        "noExcessiveCognitiveComplexity": "error"
+        "noFlatMapIdentity": "error",
+        "noExcessiveCognitiveComplexity": "error",
+        "useDateNow": "error"
       },
       "correctness": {
-        "noFlatMapIdentity": "error",
-        "noNewSymbol": "error",
         "noUndeclaredVariables": "error",
         "noUnusedImports": "error",
         "noUnusedPrivateClassMembers": "error",
-        "noUnusedVariables": "error",
-        "useArrayLiterals": "error"
+        "noUnusedVariables": "error"
       },
       "style": {
         "noRestrictedGlobals": {
           "level": "error",
           "options": {
-            "deniedGlobals": ["event"]
+            "deniedGlobals": {
+              "event": "Do not  use event global variable. Use the event parameter in the function instead."
+            }
           }
         },
+        "useArrayLiterals": "error",
         "useBlockStatements": "error",
         "useCollapsedElseIf": "error",
         "useConsistentArrayType": {
@@ -62,6 +73,7 @@
             "syntax": "shorthand"
           }
         },
+        "useConsistentBuiltinInstantiation": "error",
         "useFilenamingConvention": {
           "level": "error",
           "options": {
@@ -76,30 +88,26 @@
           "options": {
             "strictCase": false,
             "requireAscii": true,
-            "enumMemberCase": "PascalCase"
+            "conventions": [{ "selector": { "kind": "enumMember" }, "formats": ["PascalCase"] }]
           }
         }
       },
       "suspicious": {
+        "noConsole": "error",
+        "noDuplicateElseIf": "error",
+        "noDuplicateObjectKeys": "error",
         "noEmptyBlockStatements": "error",
+        "noEvolvingTypes": "error",
+        "noMisplacedAssertion": "error",
         "noSkippedTests": "error",
         "useAwait": "error",
         "noRedeclare": "error"
-      },
-      "nursery": {
-        "noConsole": "error",
-        "noDuplicateElseIf": "error",
-        "noDuplicateJsonKeys": "error",
-        "noEvolvingTypes": "error",
-        "noMisplacedAssertion": "error",
-        "useConsistentBuiltinInstantiation": "error",
-        "useDateNow": "error"
       }
     }
   },
   "overrides": [
     {
-      "include": ["**/*.test.*", "**/tests/**"],
+      "includes": ["**/*.test.*", "**/tests/**"],
       "linter": {
         "rules": {
           "style": {
@@ -113,7 +121,7 @@
       }
     },
     {
-      "include": ["**/package-lock.json", "**/package.json"],
+      "includes": ["**/package-lock.json", "**/package.json"],
       "formatter": {
         "enabled": false
       }

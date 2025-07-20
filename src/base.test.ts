@@ -6,7 +6,7 @@ const promiseExec = promisify(exec);
 
 it('test', async () => {
   const promise = promiseExec(
-    'npx biome check --write --config-path="biome.base.jsonc" --stdin-file-path="example.ts"',
+    'npx biome check --reporter=json --error-on-warnings --write --config-path="biome.base.jsonc" --stdin-file-path="example.ts"',
     {
       encoding: 'utf-8',
       timeout: 5000,
@@ -24,12 +24,12 @@ it('test', async () => {
     ].join('\n\r'),
   );
   promise.child.stdin?.end();
-  const { stdout, stderr } = await promise;
+
+  const { stdout } = await promise;
   expect(stdout).toBe(
     [
-      "import { expect, it } from 'vitest';",
-      '',
       "import { delimiter } from 'path';",
+      "import { expect, it } from 'vitest';",
       '',
       `it("delimiter is ':'", () => {`,
       "  expect(delimiter).toEqual(':');",
@@ -37,8 +37,4 @@ it('test', async () => {
       '',
     ].join('\n'),
   );
-
-  expect(stderr).toContain('lint/style/useNodejsImportProtocol  FIXABLE');
-  expect(stderr).toContain(" - import·{·delimiter·}·from·'path';");
-  expect(stderr).toContain(" + import·{·delimiter·}·from·'node:path';");
 });

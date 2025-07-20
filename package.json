@@ -39,14 +39,13 @@
   },
   "homepage": "https://github.com/illandril/biome-config",
   "dependencies": {
-    "@biomejs/biome": "1.8.3"
+    "@biomejs/biome": "2.1.2"
   },
   "devDependencies": {
     "@types/node": "^22.7.4",
-    "@types/react": "^18.3.3",
-    "husky": "^9.1.1",
-    "react": "^18.3.1",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.4"
+    "husky": "^9.1.7",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.5",
+    "vitest": "^3.2.4"
   }
 }
