@@ -1,6 +1,6 @@
 {
   "name": "@illandril/biome-config",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Biome rules used by illandril for his projects",
   "type": "module",
   "exports": {
